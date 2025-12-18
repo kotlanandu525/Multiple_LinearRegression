@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import os
 
-st.set_page_config("Multiple_Linear_Regression",layout="centered")st.markdown("""
+st.set_page_config("Multiple_Linear_Regression",layout="centered")
 <style>
 
 /* Card container */
@@ -169,6 +169,7 @@ st.markdown(
 )
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
