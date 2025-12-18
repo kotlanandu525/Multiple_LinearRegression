@@ -7,16 +7,44 @@ import matplotlib.pyplot  as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 import pandas as pd
+import os
 
+st.set_page_config("Multiple_Linear_Regression",layout="centered")st.markdown("""
+<style>
 
-st.set_page_config("Multiple_Linear_Regression",layout="centered")
-def load_css(file):
-    try:
-        with open(file) as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    except FileNotFoundError:
-        st.warning("style.css not found. App running without custom styles.")
-load_css("style.css")
+/* Card container */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Prediction box */
+.prediction-box {
+    background-color: #e8f4ff;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #0a3d62;
+}
+
+/* Headers */
+h1, h3 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Metric labels */
+[data-testid="stMetricValue"] {
+    font-size: 22px;
+}
+
+</style>
+""", unsafe_allow_html=True)
 
 #title of the page
 st.markdown("""
@@ -141,6 +169,7 @@ st.markdown(
 )
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
