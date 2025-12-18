@@ -10,9 +10,12 @@ import pandas as pd
 
 st.set_page_config("Multiple_Linear_Regression",layout="centered")
 def load_css(file):
-    with open(file) as f:
-        st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
-load_css("style.css")
+    try:
+        with open(file) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.warning("style.css not found. App running without custom styles.")
+
 
 #title of the page
 st.markdown("""
@@ -137,4 +140,5 @@ st.markdown(
 )
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
