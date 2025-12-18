@@ -8,6 +8,28 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 import pandas as pd
 
+st.markdown("""
+<style>
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.prediction-box {
+    background-color: #e6f4ff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 st.set_page_config("Multiple_Linear_Regression",layout="centered")
 def load_css(file):
     try:
@@ -140,5 +162,6 @@ st.markdown(
 )
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
