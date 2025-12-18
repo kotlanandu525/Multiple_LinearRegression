@@ -37,7 +37,7 @@ def load_css(file):
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning("style.css not found. App running without custom styles.")
-
+load_css("style.css")
 
 #title of the page
 st.markdown("""
@@ -162,6 +162,7 @@ st.markdown(
 )
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
