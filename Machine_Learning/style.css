@@ -1,46 +1,59 @@
-.stApp{
-    background: linear-gradient(
-        135deg,
-        #a3d64b 0%,
-        #fa9ada 50%,
-        #c65587 100%
+/* Background */
+.stApp {
+    background: linear-gradient(120deg, #4b80e3, #dd1515);
+    font-family: "Segoe UI", sans-serif;
+}
 
-    );
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Card layout */
+.card {
+    background: #9ede54;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
 
+/* Headings */
+h1, h2, h3 {
+    color: #c92151;
 }
-.card{
-    background-color: #96e35f;
-    padding:25px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.88);
-    margin-bottom: 25px;
-    color: #c225a2;
-}
-h1,h2,h3{
-    color: red;
-}
-div[data-testid="metric-container"]{
-    background-color: green;
-    border-radius: 5px;
+
+/* Metrics */
+[data-testid="metric-container"] {
+    background: #49d7ea;
+    border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: inset 0 0 0 1px #e5e7eb;
 }
 
-.prediction-box{
-   background: linear-gradient(
-        135deg,
-        #ea6bf1 0%,
-        #1a5074 50%,
-        #c225a2 100%
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    color: rgb(69, 20, 147);
+    border-radius: 10px;
+    height: 45px;
+    font-size: 16px;
+    border: none;
+}
 
-    );
-        border-radius: 14px;
-        padding: 22px;
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        color: chocolate;
-        margin-top: 15px;
+.stButton > button:hover {
+    background: linear-gradient(90deg, #4338ca, #4f46e5);
+}
+
+/* Prediction highlight */
+.prediction-box {
+    background: #9917aa;
+    border-left: 6px solid #06b6d4;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #11c760;
+}
+
+/* File uploader */
+section[data-testid="stFileUploader"] {
+    background: #3d0dc3;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dashed #c7d2fe;
 }
