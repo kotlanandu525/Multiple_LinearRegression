@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
+import os
 
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
@@ -19,14 +20,17 @@ st.set_page_config(
 # --------------------------------------------------
 # Load CSS
 # --------------------------------------------------
-def load_css(file):
+def load_css(file_name):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    css_path = os.path.join(base_dir, file_name)
+
     try:
-        with open(file) as f:
+        with open(css_path) as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     except FileNotFoundError:
         st.warning("style.css not found")
-
 load_css("style.css")
+
 
 # --------------------------------------------------
 # Title
