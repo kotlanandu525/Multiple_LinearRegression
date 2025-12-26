@@ -12,6 +12,25 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 # --------------------------------------------------
 # Page config
 # --------------------------------------------------
+st.markdown("""
+<style>
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+.prediction-box {
+    background: #ecfeff;
+    border-left: 6px solid #06b6d4;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.set_page_config(
     page_title="Multiple Linear Regression",
     layout="centered"
@@ -200,3 +219,4 @@ ax.set_ylabel(y_col)
 
 st.pyplot(fig)
 st.markdown('</div>', unsafe_allow_html=True)
+
